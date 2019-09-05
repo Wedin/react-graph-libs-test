@@ -2,14 +2,10 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { VictoryChart, VictoryLine, VictoryAxis, VictoryArea, VictoryTooltip, VictoryVoronoiContainer } from "victory";
 import { data } from "./demoData";
+import { dateFormatter } from "./utils";
 
 const stories = storiesOf("Victory chart", module);
 const max = data.map(point => point.y).sort()[0];
-
-const dateFormatter = new Intl.DateTimeFormat("en-US", {
-  month: "short",
-  day: "2-digit",
-});
 
 stories.add("victory", () => (
   <VictoryChart

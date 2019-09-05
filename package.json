@@ -17,8 +17,11 @@
     "@nivo/core": "^0.59.1",
     "@nivo/generators": "^0.59.0",
     "@nivo/line": "^0.59.3",
+    "babel-plugin-styled-components": "^1.10.6",
+    "react-virtualized": "^9.21.1",
     "react-vis": "^1.11.7",
     "recharts": "^1.7.1",
+    "styled-components": "^4.3.2",
     "victory": "^33.0.5"
   },
   "devDependencies": {
