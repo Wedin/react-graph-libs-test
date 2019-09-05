@@ -42,6 +42,6 @@ stories.add("nivo", () => (
     curve="linear"
     enablePoints={false}
     useMesh={true}
-    colors={["#3498db"]}
+    colors={["#78c1f8"]}
   />
 ));
