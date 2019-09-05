@@ -14,7 +14,7 @@ stories.add("victory", () => (
     containerComponent={
       <VictoryVoronoiContainer
         voronoiBlacklist={["graph-area"]}
-        labels={({ datum }) => `Avg. responsetime ${datum.y}, ${dateFormatter.format(new Date(datum.y * 1000))}`}
+        labels={({ datum }) => `Time ${datum.y}, ${dateFormatter.format(new Date(datum.y * 1000))}`}
         labelComponent={<VictoryTooltip />}
       />
     }

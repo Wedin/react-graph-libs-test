@@ -21,8 +21,9 @@ class CustomizedAxisTick extends PureComponent {
 const CustomTooltip = ({ active, payload, label }) => {
   if (active) {
     return (
+      // TODO: Style this
       <div className="custom-tooltip">
-        <p>Avg. response time</p>
+        <p>Tooltip title</p>
         <p className="label">{payload[0].value}</p>
         <p className="label">{dateFormatter.format(new Date(label * 1000))}</p>
       </div>

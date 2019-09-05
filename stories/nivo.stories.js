@@ -30,7 +30,7 @@ const TooltipTitle = styled.p`
   margin-bottom: 2px;
 `;
 
-const TooltipResponsetime = styled.span`
+const TooltipMs = styled.span`
   font-size: 22px;
   margin-top: 2px;
 `;
@@ -38,10 +38,15 @@ const TooltipResponsetime = styled.span`
 const CustomToolTip = ({ point }) => {
   const timestamp = point.x;
   return (
-    <StyledTooltip>
-      <TooltipTitle>Avg. responsetime</TooltipTitle>
+    <StyledTooltip
+      onClick={() => {
+        console.log("asdf");
+        alert("asd");
+      }}
+    >
+      <TooltipTitle>Title here </TooltipTitle>
       <span>{dateTimeFormatter.format(timestamp * 1000)}</span>
-      <TooltipResponsetime>{point.y}ms</TooltipResponsetime>
+      <TooltipMs>{point.y}ms</TooltipMs>
     </StyledTooltip>
   );
 };
@@ -49,51 +54,48 @@ const CustomToolTip = ({ point }) => {
 stories.add("nivo", () => (
   <AutoSizer>
     {({ width }) => (
-      <>
-        <CustomToolTip point={{ y: 896, x: 1567544400 }} />
-        <Line
-          width={width || 900}
-          height={400}
-          enableGridX={false}
-          enableGridY={false}
-          enableArea={true}
-          margin={{ top: 20, right: 20, bottom: 60, left: 80 }}
-          animate={true}
-          data={[
-            {
-              id: "asdfasdfasdf corp. A",
-              data: data,
-            },
-          ]}
-          xScale={{
-            type: "time",
-            format: "%s",
-            precision: "second",
-          }}
-          xFormat="time:%s"
-          yScale={{
-            type: "linear",
-            min: 0,
-            max: max * 2,
-          }}
-          axisLeft={{
-            legend: "time",
-            legendOffset: 12,
-            format: value => `${value / 1000}s`,
-          }}
-          axisBottom={{
-            format: "%b %d",
-            // tickValues: "every 2 days",
-          }}
-          curve="linear"
-          enablePoints={false}
-          useMesh={true}
-          colors={["#78c1f8"]}
-          tooltip={({ point }) => {
-            return <CustomToolTip point={{ x: parseInt(point.data.xFormatted, 10), y: point.data.y }} />;
-          }}
-        />
-      </>
+      <Line
+        width={width || 900}
+        height={400}
+        enableGridX={false}
+        enableGridY={false}
+        enableArea={true}
+        margin={{ top: 20, right: 20, bottom: 60, left: 80 }}
+        animate={true}
+        data={[
+          {
+            id: "asdfasdfasdf corp. A",
+            data: data,
+          },
+        ]}
+        xScale={{
+          type: "time",
+          format: "%s",
+          precision: "second",
+        }}
+        xFormat="time:%s"
+        yScale={{
+          type: "linear",
+          min: 0,
+          max: max * 2,
+        }}
+        axisLeft={{
+          legend: "time",
+          legendOffset: 12,
+          format: value => `${value / 1000}s`,
+        }}
+        axisBottom={{
+          format: "%b %d",
+          // tickValues: "every 2 days",
+        }}
+        curve="linear"
+        enablePoints={false}
+        useMesh={true}
+        colors={["#78c1f8"]}
+        tooltip={({ point }) => {
+          return <CustomToolTip point={{ x: parseInt(point.data.xFormatted, 10), y: point.data.y }} />;
+        }}
+      />
     )}
   </AutoSizer>
 ));
