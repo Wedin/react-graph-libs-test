@@ -34,7 +34,7 @@ const CustomTooltip = ({ active, payload, label }) => {
 };
 
 const stories = storiesOf("Recharts", module);
-stories.add("recharts", () => (
+stories.add("line charts", () => (
   <LineChart width={900} height={400} data={data}>
     <XAxis dataKey="x" tick={<CustomizedAxisTick />} />
     <YAxis tickFormatter={tick => `${tick / 1000}s`} />

@@ -4,13 +4,6 @@ Nivo
 https://github.com/plouc/nivo/
 GH stars: 5700, usedby 311
 
-Response from Bartek and Tomasz:
-For simple graphs - Nivo is a good choice.
-
-If you know that you need custom functionality, I will recommend you to do research with Nivo before you decide to use it
-They have struggled with custom functionality but were abled to achieve them.
-In my opinion, nivo is ok for simple charts, for more advanced - it requires a bit more coding and combinations
-
 Recharts:
 https://github.com/recharts/recharts
 GH stars: 12300, used by 18000

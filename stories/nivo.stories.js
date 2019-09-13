@@ -51,7 +51,7 @@ const CustomToolTip = ({ point }) => {
   );
 };
 
-stories.add("nivo", () => (
+stories.add("line chart", () => (
   <AutoSizer>
     {({ width }) => (
       <Line
